@@ -254,11 +254,5 @@ async def on_ready():
     except Exception as e:
         print(f"명령어 동기화 실패: {e}")
 
-# Persistent View 등록
-persistent_view = discord.ui.View(timeout=None)
-persistent_button = discord.ui.Button(style=discord.ButtonStyle.green, label="인증하기")
-persistent_button.callback = button_callback
-persistent_view.add_item(persistent_button)
-client.add_view(persistent_view)
 
 client.run(TOKEN)
